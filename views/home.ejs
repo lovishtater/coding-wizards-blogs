@@ -1,0 +1,20 @@
+<%- include("partials/header"); %>
+<h1 class="navbar-nav">home</h1>
+<em><%= homeStartingContents %> </em>
+
+<% newPost.forEach(function (params) {%>
+<div class="card text-center">
+  <div class="card-header">
+    <%= params.author %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%=  params.title%></h5>
+    <p class="card-text"><%= params.content.substring(0, 100)+"..."  %> </p>
+    <a href="/posts/<%= params.title %> " class="btn btn-primary">Read More</a>
+  </div>
+  <div class="card-footer text-muted">
+    <em><%= params.date %> </em>
+  </div>
+</div>
+<% }); %>
+<%- include("partials/footer"); %>

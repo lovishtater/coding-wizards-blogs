@@ -1,0 +1,37 @@
+<%- include("partials/header"); %>
+<h1>Compose</h1>
+<form action="/compose" method="post">
+
+
+    <div class="form-group">
+        <div class="container ">
+            <div class="row">
+                <div class="col input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label style="margin-right:5px; " for="date">Date:</label>
+                    </div>
+                    <input type="date" name="dateText" class="form-control">
+                </div>
+                <div class="col input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label style="margin-right: 5px; " for="author">Author:</label>
+                    </div>
+                    <input type="text" name="authorName" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+    <label for="title">Title</label>
+    <br>
+    <textarea class="form-control" name="titleText" cols="150" rows="2" placeholder="Enter your title"></textarea>
+    <small id="emailHelp" class="form-text text-muted">Please keep the title short!</small>
+    <br>
+    <label for="content">Content</label>
+    <br>
+    <textarea class="form-control" name="contentText" cols="150" rows="8"
+        placeholder="Enter the Blog content"></textarea>
+    <br>
+
+    <button type="submit" name="button" class="btn btn-primary">Publish</button>
+</form>
+<%- include("partials/footer"); %>

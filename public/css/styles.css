@@ -1,0 +1,70 @@
+h1 {
+    font-family: 'Sansita Swashed',
+        cursive;
+    color: #4555A3 !important;
+    text-align: center;
+
+}
+
+.col {
+    padding-left: 0 !important;
+}
+
+.card {
+    margin: 10px auto;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+.navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: #cff1ef;
+
+}
+
+.navbar-brand {
+    font-family: 'Audiowide',
+        cursive;
+    color: #4555A3 !important;
+}
+
+.navbar-nav {
+    color: #4555A3 !important;
+    font-weight: bold;
+}
+
+.navbar-nav li a:hover {
+    color: #1abc9c !important;
+
+}
+
+.footer-padding {
+    padding-bottom: 70px;
+}
+
+.footer {
+
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1abc9c;
+}
+
+.footer p {
+    margin-top: 25px;
+    padding-top: 5px;
+    font-size: 14px;
+    color: #fff;
+}
