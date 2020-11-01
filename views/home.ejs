@@ -1,7 +1,29 @@
 <%- include("partials/header"); %>
 <h1 class="navbar-nav">home</h1>
-<img src="https://i.ibb.co/61yyjVz/logo.png" alt="coding wizards logo" class="logo">
-<em><%= homeStartingContents %> </em>
+<!-- <img src="https://i.ibb.co/61yyjVz/logo.png" alt="coding wizards logo" class="logo"> -->
+<center><em><%= homeStartingContents %> </em></center>
+<br>
+<div class="container" style="padding: auto; text-align: center;">
+<script src="https://apis.google.com/js/platform.js"></script>
+<div  class="g-ytsubscribe" data-channelid="UCEp5dV9ZPf1kvrOA7SAN1rw" data-layout="full" data-count="default"></div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2><strong>C Language playlist</strong></h2>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLUxcLTS1fiM1pUq9tqQC886ppo8pVIWNC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <div class="col-sm">
+      <h2><strong>DSA in C++</strong></h2>
+     <iframe src="https://www.youtube.com/embed/videoseries?list=PLUxcLTS1fiM0iwtBDP0B3GRkPaAEFjdZf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-sm">
+      <h2><strong>STL in C++ playlist</strong> </h2>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLUxcLTS1fiM2yLV2LYgBji8T7gGU_RMkU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
 
 <% newPost.forEach(function (params) {%>
 <div class="card text-center">

@@ -1,4 +1,19 @@
+body {
+    background-image: url("https://i.ibb.co/61yyjVz/logo.png");
+    background-color: white;
+     background-attachment: fixed;
+     background-position: left  ;
+     background-repeat: no-repeat;
+     background-size: 100px;
+}
 h1 {
+    font-family: 'Sansita Swashed',
+        cursive;
+    color: #4555A3 !important;
+    text-align: center;
+
+}
+h2 {
     font-family: 'Sansita Swashed',
         cursive;
     color: #4555A3 !important;
@@ -54,6 +69,10 @@ h1 {
 .navbar-nav li a:hover {
     color: #1abc9c !important;
 
+}
+
+.container {
+    padding: 10px 0px;
 }
 
 .footer-padding {
