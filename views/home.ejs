@@ -1,43 +1,71 @@
 <%- include("partials/header"); %>
-<h1 class="navbar-nav">home</h1>
+<h1 class="navbar-nav">Home</h1>
 <!-- <img src="https://i.ibb.co/61yyjVz/logo.png" alt="coding wizards logo" class="logo"> -->
 <center><em><%= homeStartingContents %> </em></center>
 <br>
 <div class="container" style="padding: auto; text-align: center;">
-<script src="https://apis.google.com/js/platform.js"></script>
-<div  class="g-ytsubscribe" data-channelid="UCEp5dV9ZPf1kvrOA7SAN1rw" data-layout="full" data-count="default"></div>
+  <script src="https://apis.google.com/js/platform.js"></script>
+  <div class="g-ytsubscribe" data-channelid="UCEp5dV9ZPf1kvrOA7SAN1rw" data-layout="full" data-count="default"></div>
 </div>
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      <h2><strong>C Language playlist</strong></h2>
-      <iframe src="https://www.youtube.com/embed/videoseries?list=PLUxcLTS1fiM1pUq9tqQC886ppo8pVIWNC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
     </div>
-    
+    <div class="col-sm">
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm">
+      <h2><strong>C Language playlist</strong></h2>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLUxcLTS1fiM1pUq9tqQC886ppo8pVIWNC" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
     <div class="col-sm">
       <h2><strong>DSA in C++</strong></h2>
-     <iframe src="https://www.youtube.com/embed/videoseries?list=PLUxcLTS1fiM0iwtBDP0B3GRkPaAEFjdZf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLUxcLTS1fiM0iwtBDP0B3GRkPaAEFjdZf" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
     <div class="col-sm">
       <h2><strong>STL in C++ playlist</strong> </h2>
-      <iframe src="https://www.youtube.com/embed/videoseries?list=PLUxcLTS1fiM2yLV2LYgBji8T7gGU_RMkU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLUxcLTS1fiM2yLV2LYgBji8T7gGU_RMkU" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
   </div>
 </div>
 
 <% newPost.forEach(function (params) {%>
-<div class="card text-center">
-  <div class="card-header">
-    <%= params.author %> <em>~author</em>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title"><%=  params.title%></h5>
-    <p class="card-text"><%= params.content.substring(0, 100)+"..."  %> </p>
-    <a href="/posts/<%= params.title %> " class="btn btn-primary">Read More</a>
-  </div>
-  <div class="card-footer text-muted">
-    <em><%= params.date %> </em>
+<div class="container register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+      <h4>Welcome</h4>
+      <p>Here is an awesome Blog written by <em><%= params.author %> </em></p>
+    </div>
+    <div class="col-md-9 register-right">
+      <h3 class="register-heading"><%=params.title%></h3>
+      
+      <div class="row register-form">
+        <div class="col-md-6">
+          <p><em><%= params.date %> </em></p>
+  <p><%= params.content.substring(0, 100)+"..."  %></p>
+   <a href="/posts/<%=params._id%>" class="btn btn-primary">Read More</a>
+
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <% }); %>
+
+
+
 <%- include("partials/footer"); %>
