@@ -4,6 +4,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require('lodash');
+require('dotenv').config();
+const port = process.env.PORT || 3000 ;
+
 const {
   functions
 } = require("lodash");
@@ -19,7 +22,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect('mongodb+srv://lovish_08:2LB3pQaSwiIkrvCt@cluster0.3zp44.mongodb.net/BlogDB', {
+mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -109,6 +112,6 @@ app.get("/posts/:postName", function (req, res) {
   });
 });
 
-app.listen(process.env.PORT || 3000, function () {
-  console.log("Server started on port 3000");
+app.listen(port , function () {
+  console.log(`Server started on port ${port}`);
 });
