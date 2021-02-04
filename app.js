@@ -5,16 +5,20 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require('lodash');
 require('dotenv').config();
-const port = process.env.PORT || 3000 ;
-
-const {
-  functions
-} = require("lodash");
+const { functions } = require("lodash");
 const mongoose = require('mongoose');
-const homeStartingContent = " Hey guys, we have created this channel to provide quality education to students who want to learn, grow and do something beautiful with their life. In return we want you to do the same to your juniors and help the youth of this nation to find its right path.";
-const aboutContent = "Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Non diam phasellus vestibulum lorem sed. Platea dictumst quisque sagittis purus sit. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Mauris in aliquam sem fringilla. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Amet massa vitae tortor condimentum lacinia quis vel eros. Enim ut tellus elementum sagittis vitae. Mauris ultrices eros in cursus turpis massa tincidunt dui.";
 const app = express();
 
+//CONTENT
+const homeStartingContent = " Hey guys, we have created this channel to provide quality education to students who want to learn, grow and do something beautiful with their life. In return we want you to do the same to your juniors and help the youth of this nation to find its right path.";
+const aboutContent = "Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Non diam phasellus vestibulum lorem sed. Platea dictumst quisque sagittis purus sit. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Mauris in aliquam sem fringilla. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Amet massa vitae tortor condimentum lacinia quis vel eros. Enim ut tellus elementum sagittis vitae. Mauris ultrices eros in cursus turpis massa tincidunt dui.";
+
+
+//PORT
+const port = process.env.PORT || 3000 ;
+
+
+//MIDDLEWARE
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({
@@ -22,11 +26,13 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
+//DATABASE CONNECTION
 mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
 
+//BLOG SCHEMA
 const blogSchema = {
   title: String,
   content: String,
@@ -35,8 +41,6 @@ const blogSchema = {
 };
 
 const Blog = mongoose.model('Blog', blogSchema);
-
-
 
 // let posts = [];
 
