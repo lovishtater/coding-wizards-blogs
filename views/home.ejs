@@ -98,7 +98,10 @@
               <p>
                 <%= params.content.substring(0, 100)+"..."  %>
               </p>
-              <button type="button" href="/posts/<%=params._id%>" class="read_more_btn">Read More</button>
+              <button class="read_more_btn">
+
+                <a href="/posts/<%=params._id%>" >Read More</a>
+              </button>
             </div>
           </div>
         </div>
