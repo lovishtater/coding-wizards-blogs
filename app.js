@@ -30,7 +30,9 @@ app.use(express.static("public"));
 mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
   useUnifiedTopology: true
-});
+}).then(() => {
+    console.log("DB CONNECTED");
+  });
 
 //BLOG SCHEMA
 const blogSchema = {
@@ -115,7 +117,7 @@ app.get("/posts/:postName", function (req, res) {
     // }
   });
 });
-
+var date = new Date()
 app.listen(port , function () {
-  console.log(`Server started on port ${port}`);
+  console.log(`Server started on port ${port} on ${date} `);
 });

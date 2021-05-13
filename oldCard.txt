@@ -1,0 +1,20 @@
+<!-- <div class="container register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://i.ibb.co/VSR1XJj/White-logo-Coding-wizards.png" alt="Coding wizards logo">
+      <h4>Welcome</h4>
+      <p>Here is an awesome Blog written by <em><%= params.author %> </em></p>
+    </div>
+    <div class="col-md-9 register-right">
+      <h3 class="register-heading"><%=params.title%></h3>
+
+      <div class="row register-form">
+        <div class="col-md-6">
+          <p><em><%= params.date %> </em></p>
+          <p><%= params.content.substring(0, 100)+"..."  %></p>
+          <a href="/posts/<%=params._id%>" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
