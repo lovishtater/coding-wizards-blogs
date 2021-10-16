@@ -50,7 +50,7 @@ app.get("/", function (req, res) {
   Blog.find({}, function (err, foundlist) {
 
     res.render("home", {
-      // homeStartingContents: homeStartingContent,
+      homeStartingContents: homeStartingContent,
       newPost: foundlist
     });
   });
@@ -58,12 +58,12 @@ app.get("/", function (req, res) {
 
 });
 
-app.get("/content", function(req,res){
-res.render("content", {
-  homeStartingContents: homeStartingContent,
-  // newPost: foundlist
-});
-});
+// app.get("/content", function(req,res){
+// res.render("content", {
+//   homeStartingContents: homeStartingContent,
+//   // newPost: foundlist
+// });
+// });
 
 
 app.get("/about", function (req, res) {

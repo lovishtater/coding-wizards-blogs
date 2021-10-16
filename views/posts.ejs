@@ -1,5 +1,10 @@
 <%- include("partials/header"); %>
+<div  class="card col-10 col-sm-10 col-md-10 col-lg-10" >
 <h1><%= title %> </h1>
-<pre><%= content %> </pre>
-<i> ~<%= author %> </i>
+
+    <p style="white-space: pre-wrap; margin: auto; padding: 10px;">
+        <%= content %> 
+        <i> ~<%= author %> </i>
+    </p>
+</div>
 <%- include("partials/footer"); %>
